@@ -1,0 +1,26 @@
+#访问端口和前缀
+server:
+   port: 8081
+   servlet:
+      context-path: /luckmoney
+
+#红包金额设置
+limit:
+   minMoney: 1
+   maxMoney: 999
+   description: 最少要发${limit.minMoney}元, 最多${limit.maxMoney}元
+
+#数据源配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/luckmoney?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: root
+  jpa:
+      hibernate:
+        ddl-auto: update
+      show-sql: true
+
+
+
